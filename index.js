@@ -8,6 +8,8 @@ const io = require('socket.io')(http, {
     }
 });
 const cors = require('cors');
+const host = '0.0.0.0';
+
 
 const PORT = process.env.PORT | 3030;
 app.use(express.json());
@@ -102,6 +104,6 @@ app.post("/create-session", (req, res) => {
 });
 
 
-http.listen(PORT, () => {
+http.listen(PORT, host, () => {
     console.log(`Listening on port ${PORT}`); 
 });
