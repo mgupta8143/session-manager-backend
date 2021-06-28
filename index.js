@@ -105,5 +105,5 @@ app.post("/create-session", (req, res) => {
 
 
 http.listen(port, () => {
-    console.log(`Listening on port ${PORT}`); 
+    console.log(`Listening on port ${port}`); 
 });
