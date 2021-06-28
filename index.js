@@ -91,6 +91,10 @@ const createNewSession = (sessionInfo) => {
     };
 }
 
+app.get("/", (req, res) => {
+    res.send("hello");
+})
+
 // POST Request to create new session
 app.post("/create-session", (req, res) => {
     createNewSession(req.body);
