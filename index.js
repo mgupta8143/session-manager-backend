@@ -11,7 +11,7 @@ const cors = require('cors');
 const host = '0.0.0.0';
 
 
-const PORT = process.env.PORT | 3030;
+const port = process.env.PORT || 3030;
 app.use(express.json());
 app.use(cors({origin:true,credentials: true}));
 
@@ -104,6 +104,6 @@ app.post("/create-session", (req, res) => {
 });
 
 
-http.listen(PORT, host, () => {
+http.listen(port, () => {
     console.log(`Listening on port ${PORT}`); 
 });
